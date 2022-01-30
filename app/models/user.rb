@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_one :payment
+  accepts_nested_attributes_for :payment
+  
   extend Devise::Models #for undefined method 'devise' for User
   # Include default devise modules. Others available are:
   #:confirmable ,:lockable, :timeoutable, :trackable and :omniauthable
